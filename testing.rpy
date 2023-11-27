@@ -330,6 +330,7 @@ label initialChoosing:
         except:
             renpy.say("Shoot or Spin")
             renpy.jump(initialChoosing)
+
     if function == "shoot":
         jump shoot
 
