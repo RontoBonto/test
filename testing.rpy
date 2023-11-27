@@ -336,6 +336,7 @@ label initialChoosing:
 
     elif function == "spin":
         jump spin
+
     else:
         n "SHOOT OR SPIN"
         jump initialChoosing
