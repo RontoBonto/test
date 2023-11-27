@@ -956,6 +956,8 @@ label medic:
         python:
             
             while bandcount is None:
+
+
                 try:
                     bandcount = int(renpy.input("Choose a number from 0 to 5."))
                 except:
@@ -1013,18 +1015,20 @@ label goWest2:
         python: 
             guess1 = None
             while guess1 is None:
+
                 try:
                     guess1 = int(renpy.input("What's your first guess?"))
+
                 except:
                     renpy.say(i, "Give an integer.")
                     pass
 
-        
-        if guess1 != randnum:
-            i "HAHAHAHA! Wrong!"
+                finally:
+                    if guess1 != randnum:
+                        i "HAHAHAHA! Wrong!"
       
-            if randnum % 2 == 0:
-                i "Clue! The number is an even number!"
+                    if randnum % 2 == 0:
+                        i "Clue! The number is an even number!"
       
             else:
                 i "Clue! The number is an odd number!"
