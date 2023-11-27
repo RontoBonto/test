@@ -307,15 +307,12 @@ label start:
 
 label extraBulletChoosing:
     python:
-            extraBullet = None
-            
-            
-            try:
-                extraBullet = int(renpy.input("How many bullets will you add in the chamber?"))
+        try:
+            extraBullet = int(renpy.input("How many bullets will you add in the chamber?"))
 
-            except:
-                renpy.say(n, "Please input an integer")
-                renpy.call_in_new_context("extraBulletChoosing")
+        except:
+            renpy.say(n, "Please input an integer")
+            renpy.call_in_new_context("extraBulletChoosing")
                     
                 
             if extraBullet < 0:
