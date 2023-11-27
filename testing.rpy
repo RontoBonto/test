@@ -314,7 +314,7 @@ label extraBulletChoosing:
                 extraBullet = int(renpy.input("How many bullets will you add in the chamber?"))
 
             except:
-                renpy.say(n, "Please input an integer greater than -1")
+                renpy.say(n, "Please input an integer")
                 renpy.call_in_new_context("extraBulletChoosing")
                     
                 
